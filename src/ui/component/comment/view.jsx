@@ -2,6 +2,7 @@
 import React from 'react';
 import relativeDate from 'tiny-relative-date';
 import Button from 'component/button';
+import Expandable from 'component/expandable';
 
 type Props = {
   author: string,
@@ -21,17 +22,11 @@ function Comment(props: Props) {
           {relativeDate(timePosted)}
         </time>
       </div>
-
-      <p className={'comment__message'}>{message}</p>
-      {/* The following is for adding threaded replies, upvoting and downvoting */}
-      {/* <div className="comment__actions card__actions--between"> */}
-      {/*  <button className={'button button--primary'}>Reply</button> */}
-
-      {/*  <span className="comment__actions-wrap"> */}
-      {/*    <button className="comment__action upvote">Up</button> */}
-      {/*    <button className="comment__action downvote">Down</button> */}
-      {/*  </span> */}
-      {/* </div> */}
+      <div>
+        <Expandable>
+          <p className={'comment__message'}>{message}</p>
+        </Expandable>
+      </div>
     </li>
   );
 }
