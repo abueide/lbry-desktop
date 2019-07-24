@@ -592,5 +592,6 @@
   " but the LBC is returned to your wallet if revoked.": " but the LBC is returned to your wallet if revoked.",
   " Both also help secure ": " Both also help secure ",
   "vanity names": "vanity names",
-  "Add support to this claim": "Add support to this claim"
+  "Add support to this claim": "Add support to this claim",
+  "%s blocks behind": "%s blocks behind"
 }
